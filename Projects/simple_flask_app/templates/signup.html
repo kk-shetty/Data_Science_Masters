@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <div class="signup-form">
+            {% if signup_error %}
+                <p class="error-message" id="login-error">{{ signup_error }}</p>
+            {% endif %}
+            <form id="signup-form" action="/validate_signup" method="post">
+                <input type="text" placeholder="First Name" id="first-name" name="first-name" class="form-input" maxlength="16" required>
+                <br>
+                <input type="text" placeholder="Last Name" id="last-name" name="last-name" class="form-input" maxlength="16" required>
+                <br>
+                <input type="text" placeholder="Date of Birth" id="date-of-birth" name="date-of-birth" class="form-input" required>
+                <br>
+                <select id="state" name="state" class="form-input" required>
+                    <option value="" disabled selected>Select State</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <!-- Add more country options here -->
+                </select>
+                <br>
+                <select id="city" name="city" class="form-input" required>
+                    <option value="" disabled selected>Select City</option>
+                    <!-- Populate city options dynamically based on selected country using JavaScript -->
+                </select>
+                <br>
+                <input type="email" placeholder="Email" id="email" name="email" class="form-input" required>
+                <br>
+                <input type="password" placeholder="Password" id="password" name="password" class="form-input" required>
+                <br>
+                <input type="password" placeholder="Confirm Password" id="confirm-password" name="confirm-password" class="form-input" required>
+                <br>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="/login">Log in</a></p>
+            <p>Want to go back> <a href="/">Home</a></p>
+        </div>
+    </div>
+
+    <script src="/static/js/signup.js"></script>
+</body>
+</html>

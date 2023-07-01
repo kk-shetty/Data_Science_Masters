@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        {% if message %}
+            <p class="redirect-message" id="redirect_login">{{ message }}</p>
+        {% endif %}
+        <h1>Login</h1>
+        <div class="login-form">
+            <form id="login-form" action="/validate_login" method="post">
+                <input type="text" placeholder="Email" name="email" id="email" class="form-input">
+                <input type="password" placeholder="Password" name="pswd" id="pswd" class="form-input">
+                <button type="submit" class="btn">Login</button>
+            </form>
+            {% if login_error %}
+                <p class="error-message" id="login-error">{{ login_error }}</p>
+            {% endif %}
+            <p>Don't have an account? <a href="/signup">Sign up</a></p>
+            <p>Want to go back> <a href="/">Home</a></p>
+        </div>
+    </div>
+</body>
+</html>
