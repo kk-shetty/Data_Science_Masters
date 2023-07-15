@@ -1,0 +1,5 @@
+This is a sample file that will be read from a python program!
+It contains some symbol as well like @ or even $.
+But these will not be considered in counting the words, also This and this are considered same word and also this.
+I am adding few additional words just in case. 
+Ok, there are no extremenly high freaquency words yet. Lets check now.
