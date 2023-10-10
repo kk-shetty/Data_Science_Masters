@@ -1,0 +1,23 @@
+{
+    "car": {
+      "make": "Toyota",
+      "model": "Camry",
+      "year": 2023,
+      "color": "Silver",
+      "fuelType": "Gasoline",
+      "transmission": "Automatic",
+      "engine": {
+        "type": "Inline-4",
+        "displacement": "2.5 liters",
+        "horsepower": 203
+      },
+      "features": [
+        "Bluetooth connectivity",
+        "Backup camera",
+        "Cruise control",
+        "Keyless entry",
+        "Power windows"
+      ]
+    }
+  }
+  
